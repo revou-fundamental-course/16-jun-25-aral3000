@@ -3,44 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Matematik - Aral</title>
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- CSS External -->
-     <link rel="stylesheet" href="css/style.css">
+    <title>Profil Sekolah</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <!-- Header Section -->
+
     <header>
-        <h1>Website Matematik - Aral</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Our Profile</a></li>
+                </ul>
         </nav>
     </header>
 
-    <!-- Main Section -->
     <main>
-        <section id="introduction">
-            <h2>Welcome to Website Matematik - Aral</h2>
-            <p>This website is dedicated to providing resources and information about mathematics.</p>
+        <section id="home">
+            <h1>Hi <span id="nama-pengguna"></span>, Welcome To Website</h1>
+            <p>Ini adalah website profil sekolah.</p>
         </section>
 
-        <section id="resources">
-            <h2>Resources</h2>
-            <ul>
-                <li><a href="https://www.khanacademy.org/math">Khan Academy</a></li>
-                <li><a href="https://www.mathsisfun.com/">Math is Fun</a></li>
-                <li><a href="https://www.wolframalpha.com/">Wolfram Alpha</a></li>
-            </ul>
+        <section id="our-facilitation">
+            <h2>Our Facilitation</h2>
+            <div class="facilitation-items">
+                <div class="item">
+                    <div class="circle"></div>
+                    <p>Professional Teacher</p>
+                </div>
+                <div class="item">
+                    <div class="circle"></div>
+                    <p>Sport Teams</p>
+                </div>
+                <div class="item">
+                    <div class="circle"></div>
+                    <p>Classroom</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="message-us">
+            <h2>Message Us</h2>
+            <div class="message-container">
+                <form id="messageForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+                <div class="form-info">
+                    <p>Current Time : <span id="current-time"></span></p>
+                    <h3>Messages:</h3>
+                    <div id="submitted-data">
+                        </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2023 Website Matematik - Aral. All rights reserved.</p>
-    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
