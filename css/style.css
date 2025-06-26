@@ -1,11 +1,16 @@
 /* General Body Styles */
 body {
-    font-family: Arial, sans-serif; /* Mengatur jenis font */
-    margin: 0; /* Menghilangkan margin default browser */
-    padding: 0; /* Menghilangkan padding default browser */
-    background-color: #f4f4f4; /* Warna latar belakang halaman */
-    color: #333; /* Warna teks default */
-    line-height: 1.6; /* Jarak antar baris teks */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f4f4f4; */ /* Anda bisa menghapus ini atau biarkan sebagai fallback */
+    background-image: url('https://wallpaperaccess.com/full/6231389.jpg'); /* Ganti dengan path gambar Anda */
+    background-repeat: no-repeat; /* Agar gambar tidak diulang */
+    background-size: cover; /* Agar gambar menutupi seluruh area body */
+    background-attachment: fixed; /* Agar gambar background tidak ikut discroll */
+    background-position: center center; /* Memposisikan gambar di tengah */
+    color: #333;
+    line-height: 1.6;
 }
 
 /* Header Styles */
@@ -25,4 +30,167 @@ header h1 {
 header p {
     margin: 0.5rem 0; /* Margin atas dan bawah untuk paragraf di header */
     font-size: 1.1rem; /* Ukuran font untuk paragraf */
+}
+
+/* Main Content Area */
+main {
+    max-width: 800px; /* Lebar maksimum konten utama */
+    margin: 2rem auto; /* Jarak atas/bawah dan tengah secara horizontal */
+    padding: 20px; /* Padding di dalam kotak konten */
+    background-color: #fff; /* Latar belakang putih untuk kotak konten */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan lembut */
+    border-radius: 8px; /* Sudut membulat */
+}
+
+/* Section Styles (Luas and Keliling) */
+section {
+    margin-bottom: 3rem; /* Jarak antara section luas dan keliling */
+    padding: 2rem; /* Padding di dalam setiap section */
+    border: 1px solid #ddd; /* Garis batas tipis */
+    border-radius: 8px; /* Sudut membulat */
+    background-color: #f9f9f9; /* Latar belakang sedikit abu-abu untuk section */
+}
+
+section:last-child {
+    margin-bottom: 0; /* Menghilangkan margin bawah untuk section terakhir */
+}
+
+section h2 {
+    color: #007bff; /* Warna judul section */
+    text-align: center; /* Judul section di tengah */
+    margin-top: 0; /* Menghilangkan margin atas default untuk h2 */
+    margin-bottom: 1.5rem; /* Jarak bawah judul section */
+}
+
+section h3 {
+    color: #555; /* Warna sub-judul h3 */
+    margin-top: 2rem; /* Jarak atas untuk sub-judul h3 */
+}
+
+section ul {
+    list-style-type: disc; /* Jenis bullet point */
+    margin-left: 20px; /* Indentasi daftar */
+}
+
+section img {
+    display: block; /* Membuat gambar menjadi elemen blok */
+    margin: 0 auto 1.5rem auto; /* Tengah gambar dan beri jarak bawah */
+    max-width: 100%; /* Memastikan gambar tidak melebihi lebar kontainer */
+    height: auto; /* Mempertahankan rasio aspek gambar */
+}
+
+/* Form and Input Styles */
+form {
+    display: flex; /* Menggunakan flexbox untuk tata letak yang lebih fleksibel */
+    flex-direction: column; /* Mengatur item dalam kolom */
+    gap: 15px; /* Jarak antara elemen form */
+    margin-top: 1.5rem; /* Jarak atas dari form */
+}
+
+label {
+    font-weight: bold; /* Membuat teks label menjadi tebal */
+    margin-bottom: 5px; /* Sedikit jarak di bawah label */
+    display: block; /* Memastikan label mengambil baris penuh */
+}
+
+input[type="number"] { /* Menargetkan input dengan tipe "number" */
+    width: 100%; /* Lebar input 100% dari kontainer induknya */
+    padding: 10px; /* Padding di dalam kotak input */
+    border: 1px solid #ccc; /* Garis batas abu-abu */
+    border-radius: 4px; /* Sudut membulat */
+    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar */
+    font-size: 1rem; /* Ukuran font di dalam input */
+}
+
+/* Button Styles */
+button[type="submit"] { /* Menargetkan tombol submit */
+    background-color: #007bff; /* Warna latar belakang biru */
+    color: white; /* Warna teks putih */
+    padding: 12px 20px; /* Padding di dalam tombol */
+    border: none; /* Menghilangkan border */
+    border-radius: 4px; /* Sudut membulat */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat di hover */
+    font-size: 1.1rem; /* Ukuran font tombol */
+    transition: background-color 0.3s ease; /* Animasi lembut saat hover */
+}
+
+button[type="submit"]:hover { /* Gaya saat tombol di-hover */
+    background-color: #0056b3; /* Warna biru lebih gelap saat di-hover */
+}
+
+/* Result Area Styles */
+div[id^="result"] { /* Menargetkan div yang ID-nya dimulai dengan "result" (untuk luas dan keliling) */
+    margin-top: 1.5rem; /* Jarak atas dari area hasil */
+    padding: 1rem; /* Padding di dalam area hasil */
+    background-color: #e2f0ff; /* Latar belakang biru muda */
+    border: 1px solid #b0d8f9; /* Border biru terang */
+    border-radius: 4px; /* Sudut membulat */
+    font-weight: bold; /* Teks hasil menjadi tebal */
+    text-align: center; /* Teks hasil di tengah */
+    display: none; /* Awalnya sembunyikan, akan ditampilkan dengan JavaScript */
+}
+
+/* Floating GIF Styles */
+.floating-gif {
+    position: fixed; /* Membuat GIF tetap di layar saat discroll */
+    bottom: 20px; /* Jarak dari bawah layar */
+    right: 20px; /* Jarak dari kanan layar */
+    width: 100px; /* Ukuran lebar GIF (sesuaikan jika perlu) */
+    height: auto; /* Otomatis menyesuaikan tinggi agar tidak distorsi */
+    z-index: 1000; /* Memastikan GIF berada di atas elemen lain */
+    /* Opsional: Tambahkan animasi ringan agar terlihat benar-benar melayang */
+    animation: floatAnimation 3s ease-in-out infinite;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Bergerak ke atas 10px */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Floating Left Container (Paper Putih) */
+.floating-left {
+    position: fixed; /* Membuat container tetap di layar saat discroll */
+    bottom: 20px; /* Jarak dari bawah layar */
+    left: 20px; /* Jarak dari kiri layar */
+    background-color: rgba(255, 255, 255, 0.9); /* Background putih dengan sedikit transparansi */
+    padding: 15px; /* Padding di dalam kotak putih */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    z-index: 1000; /* Memastikan berada di atas elemen lain */
+    display: flex; /* Menggunakan flexbox untuk tata letak logo dan link */
+    flex-direction: column; /* Item tersusun vertikal */
+    align-items: center; /* Pusat item secara horizontal */
+    gap: 10px; /* Jarak antara logo dan link */
+    width: 150px; /* Lebar kotak (sesuaikan jika perlu) */
+    text-align: center; /* Teks di tengah */
+    animation: floatAnimation 3s ease-in-out infinite; /* Animasi yang sama dengan GIF */
+}
+
+/* Floating Logo Inside Container */
+.floating-logo {
+    max-width: 50px; /* Lebar maksimum logo (sesuaikan) */
+    height: auto; /* Mempertahankan rasio aspek */
+    display: block; /* Memastikan gambar sebagai blok */
+    margin: 0 auto; /* Tengah gambar di dalam container */
+}
+
+/* YouTube Link Styles */
+.youtube-link {
+    color: #ff0000ad; /* Warna merah khas YouTube */
+    text-decoration: none; /* Menghilangkan garis bawah link */
+    font-weight: bold; /* Teks link tebal */
+    font-size: 0.9rem; /* Ukuran font link */
+    transition: color 0.3s ease; /* Animasi warna saat hover */
+}
+
+.youtube-link:hover {
+    color: #7400ccf4; /* Warna merah lebih gelap saat hover */
+    text-decoration: underline; /* Menambahkan garis bawah saat hover */
 }
