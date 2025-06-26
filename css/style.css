@@ -157,7 +157,7 @@ div[id^="result"] { /* Menargetkan div yang ID-nya dimulai dengan "result" (untu
 /* Floating Left Container (Paper Putih) */
 .floating-left {
     position: fixed; /* Membuat container tetap di layar saat discroll */
-    bottom: 20px; /* Jarak dari bawah layar */
+    top: 20px; /* Jarak dari bawah layar */
     left: 20px; /* Jarak dari kiri layar */
     background-color: rgba(255, 255, 255, 0.9); /* Background putih dengan sedikit transparansi */
     padding: 15px; /* Padding di dalam kotak putih */
