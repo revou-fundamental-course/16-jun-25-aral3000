@@ -4,20 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator Segitiga</title>
+    <link rel="stylesheet" href="css/style.css"> </head>
     </head>
 <body>
+    <header>
+        <h1>Welcome to Katik</h1>
+        <p>Halo Sobat, Selamat datang di Katik, sebuah aplikasi sederhana yang berfungsi untuk menghitung luas dan keliling bangun datar segitiga.</p>
+    </header>
+
+    <main>
+        <section id="luas-segitiga">
+            <h2>Luas Segitiga</h2>
+            <img src="https://via.placeholder.com/200x150?text=Gambar+Segitiga" alt="Gambar Segitiga dengan alas a dan tinggi t">
+            <p>Rumus Luas Segitiga yaitu:</p>
+            <p>L = 1/2 x a x t</p>
+            <p>Di mana:</p>
+            <ul>
+                <li>L = Luas</li>
+                <li>a = Panjang Alas</li>
+                <li>t = Tinggi</li>
+            </ul>
+
+            <h3>Hitung Luas Segitiga</h3>
+            <form id="form-luas">
+                <label for="alas-luas">Nilai Alas:</label>
+                <input type="number" id="alas-luas" required>
+                <br><br>
+                <label for="tinggi-luas">Nilai Tinggi:</label>
+                <input type="number" id="tinggi-luas" required>
+                <br><br>
+                <button type="submit">Hitung</button>
+            </form>
+
+            <div id="result-luas">
+                </div>
+            </section>
+
+        </main>
+        <section id="keliling-segitiga">
+            <h2>Keliling Segitiga</h2>
+            <img src="https://via.placeholder.com/200x150?text=Gambar+Segitiga" alt="Gambar Segitiga dengan sisi S1, S2, S3">
+            <p>Rumus Keliling Segitiga yaitu:</p>
+            <p>K = S1 + S2 + S3</p>
+            <p>Di mana:</p>
+            <ul>
+                <li>K = Keliling</li>
+                <li>S1 = Sisi A</li>
+                <li>S2 = Sisi B</li>
+                <li>S3 = Sisi C</li>
+            </ul>
+
+            <h3>Hitung Keliling Segitiga</h3>
+            <form id="form-keliling">
+                <label for="sisi1-keliling">Nilai Sisi A:</label>
+                <input type="number" id="sisi1-keliling" required>
+                <br><br>
+                <label for="sisi2-keliling">Nilai Sisi B:</label>
+                <input type="number" id="sisi2-keliling" required>
+                <br><br>
+                <label for="sisi3-keliling">Nilai Sisi C:</label>
+                <input type="number" id="sisi3-keliling" required>
+                <br><br>
+                <button type="submit">Hitung</button>
+            </form>
+
+            <div id="result-keliling">
+                </div>
+        </section>
     </body>
 </html>
-    <h1>Kalkulator Segitiga</h1>
-    <form id="triangleForm">
-        <label for="base">Panjang Alas:</label>
-        <input type="number" id="base" required>
-        <br>
-        <label for="height">Tinggi:</label>
-        <input type="number" id="height" required>
-        <br>
-        <button type="submit">Hitung Luas</button>
-    </form>
-    <p id="result"></p>
-
-    <script src="script.js"></script>

@@ -1,210 +1,28 @@
-/* General Body Styling */
+/* General Body Styles */
 body {
     font-family: Arial, sans-serif; /* Mengatur jenis font */
-    margin: 0; /* Menghilangkan margin bawaan browser */
+    margin: 0; /* Menghilangkan margin default browser */
+    padding: 0; /* Menghilangkan padding default browser */
     background-color: #f4f4f4; /* Warna latar belakang halaman */
-    color: #333; /* Warna teks umum */
+    color: #333; /* Warna teks default */
+    line-height: 1.6; /* Jarak antar baris teks */
 }
 
-/* Header and Navigation Styling */
+/* Header Styles */
 header {
-    background-color: #333; /* Warna latar belakang header */
+    background-color: #007bff; /* Warna latar belakang header */
     color: white; /* Warna teks di header */
     padding: 1rem 0; /* Padding atas dan bawah */
-    text-align: center; /* Teks rata tengah */
+    text-align: center; /* Teks di tengah */
+    margin-bottom: 2rem; /* Jarak bawah header */
 }
 
-nav ul {
-    list-style: none; /* Menghilangkan bullet point pada daftar */
-    padding: 0; /* Menghilangkan padding bawaan daftar */
-    margin: 0; /* Menghilangkan margin bawaan daftar */
-    display: flex; /* Membuat item menu sejajar */
-    justify-content: center; /* Menata item menu di tengah */
+header h1 {
+    margin: 0; /* Menghilangkan margin default untuk h1 di header */
+    font-size: 2.5rem; /* Ukuran font untuk h1 */
 }
 
-nav ul li {
-    margin: 0 15px; /* Margin antar item menu */
-}
-
-nav ul li a {
-    color: white; /* Warna link */
-    text-decoration: none; /* Menghilangkan garis bawah pada link */
-    font-weight: bold; /* Teks tebal */
-    padding: 5px 10px; /* Padding di sekitar teks link */
-    transition: background-color 0.3s ease; /* Efek transisi saat hover */
-}
-
-nav ul li a:hover {
-    background-color: #555; /* Warna latar belakang saat dihover */
-    border-radius: 5px; /* Sudut membulat saat dihover */
-}
-
-/* Main Content Styling */
-main {
-    padding: 20px; /* Padding di sekitar konten utama */
-    max-width: 960px; /* Lebar maksimum konten */
-    margin: 20px auto; /* Pusatkan konten utama */
-    background-color: white; /* Latar belakang konten utama */
-    border-radius: 8px; /* Sudut membulat */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Efek bayangan */
-}
-
-section {
-    margin-bottom: 40px; /* Margin bawah antar bagian */
-    padding: 20px; /* Padding di dalam setiap bagian */
-    border-bottom: 1px solid #eee; /* Garis bawah pemisah antar bagian */
-}
-
-section:last-child {
-    border-bottom: none; /* Menghilangkan garis bawah pada bagian terakhir */
-}
-
-h1, h2 {
-    color: #333; /* Warna judul */
-    text-align: center; /* Judul rata tengah */
-    margin-bottom: 20px; /* Margin bawah judul */
-}
-
-/* Home Section Specific Styling */
-#home {
-    text-align: center;
-}
-
-#home h1 {
-    font-size: 2.5em; /* Ukuran font judul utama */
-    color: #007bff; /* Warna biru untuk judul utama */
-}
-
-/* Our Facilitation Section Styling */
-#our-facilitation .facilitation-items {
-    display: flex; /* Membuat item sejajar */
-    justify-content: space-around; /* Menyebarkan item secara merata */
-    flex-wrap: wrap; /* Membungkus item ke baris baru jika tidak cukup ruang */
-    gap: 20px; /* Jarak antar item */
-}
-
-#our-facilitation .item {
-    text-align: center;
-    flex-basis: 30%; /* Lebar dasar setiap item */
-    min-width: 150px; /* Lebar minimum */
-}
-
-#our-facilitation .circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; /* Membuat lingkaran */
-    border: 2px solid #007bff; /* Border lingkaran */
-    margin: 0 auto 10px; /* Pusatkan lingkaran dan beri margin bawah */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #e6f2ff; /* Warna latar belakang lingkaran */
-}
-
-/* Message Us Section Styling */
-#message-us .message-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap; /* Membungkus jika layar kecil */
-}
-
-#message-us form {
-    flex: 2; /* Mengambil 2 bagian dari total 3 */
-    min-width: 300px;
-}
-
-#message-us .form-info {
-    flex: 1; /* Mengambil 1 bagian dari total 3 */
-    min-width: 250px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #eee;
-}
-
-.form-group {
-    margin-bottom: 15px; /* Margin bawah antar grup form */
-}
-
-.form-group label {
-    display: block; /* Membuat label di baris baru */
-    margin-bottom: 5px; /* Margin bawah label */
-    font-weight: bold;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="tel"],
-.form-group textarea {
-    width: calc(100% - 20px); /* Lebar input, dikurangi padding */
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar */
-}
-
-.form-group textarea {
-    resize: vertical; /* Memungkinkan textarea diubah ukurannya secara vertikal */
-}
-
-button[type="submit"] {
-    background-color: #28a745; /* Warna hijau untuk tombol submit */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer; /* Mengubah kursor menjadi pointer saat diarahkan */
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-    background-color: #218838; /* Warna hijau lebih gelap saat dihover */
-}
-
-#submitted-data {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #e2f0ff;
-    border: 1px solid #b0d8ff;
-    border-radius: 5px;
-    min-height: 50px;
-}
-
-#submitted-data p {
-    margin: 5px 0;
-    line-height: 1.5;
-}
-
-
-/* Responsive Design (for Mobile) */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Menu disusun vertikal di layar kecil */
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    #our-facilitation .item {
-        flex-basis: 45%; /* Lebar item di layar kecil */
-    }
-
-    #message-us .message-container {
-        flex-direction: column; /* Form dan info disusun vertikal di layar kecil */
-    }
-
-    #message-us form,
-    #message-us .form-info {
-        min-width: unset; /* Reset min-width */
-        width: 100%; /* Ambil lebar penuh */
-    }
-}
-
-@media (max-width: 480px) {
-    #our-facilitation .item {
-        flex-basis: 90%; /* Hampir lebar penuh di layar sangat kecil */
-    }
+header p {
+    margin: 0.5rem 0; /* Margin atas dan bawah untuk paragraf di header */
+    font-size: 1.1rem; /* Ukuran font untuk paragraf */
 }
